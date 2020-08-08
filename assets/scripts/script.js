@@ -1,5 +1,6 @@
 // Assignment Code
 // Define all available characters to be used 
+// Need to add in additional comments AND check with compatibility
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
 var symbols = " !#$%&'()*+,-./:;<=>?@][^_`{|}~";
