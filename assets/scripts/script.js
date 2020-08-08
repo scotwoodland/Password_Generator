@@ -24,36 +24,55 @@ function myPassword() {
       allPossibleCharacters = (allPossibleCharacters + uppercase)
       alert("You chose to include uppercase characters in your password.")
     }
-
+    
+    else {
+      alert("You chose NOT to include uppercase characters.")
+    }
+    
     var isLowercase = confirm("Would you like lowercase characters in your password?");
-
+    
     if (isLowercase === true) {
       allPossibleCharacters = (allPossibleCharacters + lowercase)
+      alert("You chose to include lowercase characters in your password.")
     }
-
-
+    
+    else {
+      alert("You chose NOT to include lowercase characters.")
+    }
+    
     var isNumbers = confirm("Would you like numbers in your password?");
-
+    
     if (isNumbers === true) {
       allPossibleCharacters = (allPossibleCharacters + numbers)
+      alert("You chose to include numbers in your password.")
     }
-
+    
+    else {
+      alert("You chose NOT to include numbers in your password.")
+    }
+    
     var isSymbols = confirm("Would you like special characters in your password?");
-
+    
     if (isSymbols === true) {
       allPossibleCharacters = (allPossibleCharacters + symbols)
+      alert("You chose to include special characters in your password.")
     }
 
-    alert("Your password is generated. Tripple click to select the new password.");
+    else {
+      alert("You chose NOT to include special characters.")
+    }
 
+    
     allPossibleCharacters = allPossibleCharacters.split("");
-
+    
     var password = "";
     for (var i = 0; i < passwordLength; i++) {
       var character = allPossibleCharacters[Math.floor(Math.random() * allPossibleCharacters.length)];
       password = (password + character);
     }
-
+    
+    alert("Your password is now generated. It is: " + (password));
+    alert("Triple click the text below to select your new password for copying.")
     passwordText.value = password;
   }
 }
